@@ -9,6 +9,10 @@ pub struct TaskControlBlock {
     pub task_status: TaskStatus,
     /// The task context
     pub task_cx: TaskContext,
+    /// The task syscall count
+    pub task_count: [u32;crate::config::SYSCALL_NUM],
+    /// The time task first sched
+    pub first_time: usize,
 }
 
 /// The status of a task
